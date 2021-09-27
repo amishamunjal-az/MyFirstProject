@@ -88,12 +88,12 @@ From the moment you can ping the hosts through Ansible, you can start automating
 
 The playbook implements the following tasks:
 
-•	Configure Elk VM by installing Docker engine (docker.io)
-•	Using the apt module, we Install python3-pip
-•	Further using pip, we Install docker
-•	Elasticsearch uses a mmapfs directory by default to store its indices. The default operating system limits on mmap counts is likely to be too low, which may result in out of memory exceptions. To set this value permanently, update the vm.max_map_count  to 262144
-•	Further we download and launch a docker elk container using the image sebp/elk:761
-•	Enable service docker on boot
+1) Configure Elk VM by installing Docker engine (docker.io)
+2) Using the apt module, we Install python3-pip
+3) Further using pip, we Install docker
+4) Elasticsearch uses a mmapfs directory by default to store its indices. The default operating system limits on mmap counts is likely to be too low, which may result in out of memory exceptions. To set this value permanently, update the vm.max_map_count  to 262144
+5) Further we download and launch a docker elk container using the image sebp/elk:761
+6) Enable service docker on boot
 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
