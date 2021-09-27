@@ -111,9 +111,13 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 The Filebeat Elasticsearch module can handle audit logs, deprecation logs, gc logs, server logs, and slow logs etc
+
 Audit logs - Having detailed audit logs helps companies monitor data and keep track of potential security breaches or internal misuses of information. 
+
 GC logs - helps in identifying how long the process lasted, how many objects were promoted, how much memory was reclaimed, and other useful information.
+
 slow logs - The slow query log can be used to find queries that take a long time to execute and are therefore candidates for optimization.
+
 Metricbeat collect metrics from the operating system and from services running on the server.
 
 ### Using the Playbook
@@ -134,3 +138,4 @@ _TODO: Answer the following questions to fill in the blanks:_
 http://40.117.113.163:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
