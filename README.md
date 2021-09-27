@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![FullNetworkDiagram.png](Diagram/FullNetworkDiagram.png)
+![FullNetworkDiagram1.png](Diagram/FullNetworkDiagram1.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ansible playbooks file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -75,7 +75,6 @@ A summary of the access policies in place can be found in the table below.
 | ELK VM       | Yes                 | 142.116.144.48/32    |
 
 ### Elk Configuration
-
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 
 **Simplified Automation**
@@ -88,6 +87,7 @@ Ansible is easy to deploy because it uses no agents or additional custom securit
 From the moment you can ping the hosts through Ansible, you can start automating your environment. Begin with small tasks, following best practices, prioritizing tasks that add value to the business, solve major problems, and gain time and improving productivity.
 
 The playbook implements the following tasks:
+
 •	Configure Elk VM by installing Docker engine (docker.io)
 •	Using the apt module, we Install python3-pip
 •	Further using pip, we Install docker
