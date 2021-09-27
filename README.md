@@ -120,15 +120,16 @@ Metricbeat collect metrics from the operating system and from services running o
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the filebeat-config.yml file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the filebeat-config.yml file to /etc/ansible/roles.
+- Update the filebeat-config.yml file to include the ELK private IP (10.1.0.4) in line 1106 under "elasticsearch output" and line 1806 under the "Kibana Output Configuration" section.
+- Run the playbook, and navigate to http://40.117.113.163:5601/app/kibana to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- filebeat-playbook.yml & Metricbeat-playbook.yml
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-/etc/ansible/hosts
+- _Which file is the playbook? filebeat-playbook.yml
+-_Where do you copy it? /etc/ansible/roles
+- _Which file do you update to make Ansible run the playbook on a specific machine? hosts file
+ How do I specify which machine to install the ELK server on versus which to install Filebeat on?
+ In the hosts file, you would go under "# Ex 2: A collection of hosts belonging to the 'webservers' group and have two sections, one for webservers and the other for your elk server.
 - Which URL do you navigate to in order to check that the ELK server is running?
 http://40.117.113.163:5601/app/kibana
 
