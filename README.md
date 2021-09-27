@@ -22,21 +22,26 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly realiable, in addition to restricting traffic to the network.
-- What aspect of security do load balancers protect? 
+
 **Protect applications from emerging threats**
 The Web Application Firewall (WAF) in the load balancer protects your website from hackers and includes daily rule updates just like a virus scanner
 **Authenticate User Access**
 The load balancer can request a username and password before granting access to your website to protect against unauthorized access
 **Protect against DDoS attack**
 The load balancer can detect and drop distributed denial-of-service (DDoS) traffic before it gets to your website
+
 - What is the advantage of a jump box?
+
 **An SSH jump server** is a regular Linux server, accessible from the Internet, which is used as a gateway to access other Linux machines on a private network using the SSH protocol. **The purpose of an SSH jump server** is to be the only gateway for access to your infrastructure reducing the size of any potential attack surface. Having a dedicated SSH access point also makes it easier to have an aggregated audit log of all SSH connections.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **filesystem** and **system logs**.
 
 - What does Filebeat watch for?
+
 Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
+
 - What does Metricbeat record?
+
 Metricbeat is a lightweight shipper that you can install on your servers to periodically collect metrics from the operating system and from services running on the server. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 Metricbeat helps you monitor your servers by collecting metrics from the system and services running on the server such as Apache, Nginx, MongoDB etc.
 
@@ -69,12 +74,16 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
+
 **Simplified Automation**
 Ansible is a simple-to-use platform, easy to install and configure, with a very fast learning rate. In less than 30 minutes, it’s possible to install and configure the system and execute ad hoc commands for servers to solve a specific problem: daylight saving time adjustments, time synchronization, root password change, updating servers, restarting services, and so on. 
+
 **Low Learning Curve**
 Ansible is easy to deploy because it uses no agents or additional custom security infrastructure. It also leverages YAML, a simple language to describe your automation job via playbooks. Playbooks push the desired settings on the hosts defined in the inventory and can even be run ad hoc (via the command line, not requiring definitions in files). 
+
 **Automate Now**
 From the moment you can ping the hosts through Ansible, you can start automating your environment. Begin with small tasks, following best practices, prioritizing tasks that add value to the business, solve major problems, and gain time and improving productivity.
+
 The playbook implements the following tasks:
 •	Configure Elk VM by installing Docker engine (docker.io)
 •	Using the apt module, we Install python3-pip
