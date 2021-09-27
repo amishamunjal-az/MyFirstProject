@@ -22,11 +22,14 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly realiable, in addition to restricting traffic to the network.
+The importance of Loadbalancer is to 
 
 **Protect applications from emerging threats**
 The Web Application Firewall (WAF) in the load balancer protects your website from hackers and includes daily rule updates just like a virus scanner
+
 **Authenticate User Access**
 The load balancer can request a username and password before granting access to your website to protect against unauthorized access
+
 **Protect against DDoS attack**
 The load balancer can detect and drop distributed denial-of-service (DDoS) traffic before it gets to your website
 
@@ -95,7 +98,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![ELK Docker PS.png](Diagram/ELK Docker PS.png)
+![ELKDockerPS.png](Diagram/ELKDockerPS.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
