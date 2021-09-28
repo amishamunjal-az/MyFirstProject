@@ -2062,17 +2062,3 @@ logging.files:
 
 # This allows to enable 6.7 migration aliases
 #migration.6_to_7.enabled: false
-root@d3f4b4dbdf65:/etc/ansible#
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete

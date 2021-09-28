@@ -12,8 +12,8 @@
 
   - name: drop in filebeat.yml
     copy:
-      src: /etc/ansible/filebeat-config.yml
-      dest: /etc/filebeat/filebeat.yml
+      src: /etc/ansible/files/filebeat-config.yml
+      dest: /etc/filebeat/filebeat-playbook.yml
 
   - name: enable and configure system module
     command: filebeat modules enable system
@@ -38,8 +38,8 @@
 
   - name: drop in Metricbeat.yml
     copy:
-      src: /etc/ansible/metricbeat-config.yml
-      dest: /etc/metricbeat/metricbeat.yml
+      src: /etc/ansible/files/Metricbeat-config.yml
+      dest: /etc/metricbeat/Metricbeat-playbook.yml
 
   - name: enable and configure system module
     command: metricbeat modules enable docker
