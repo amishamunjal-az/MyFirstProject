@@ -124,6 +124,9 @@ Metricbeat collect metrics from the operating system and from services running o
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
+![Ansible_container.png](Screenshots/Ansible_container.png)
+![Attaching_container.png](Screenshots/Attaching_container.png)
+
 SSH into the control node and follow the steps below:
 - Copy the filebeat-config.yml file to /etc/ansible/files.
 - Update the filebeat-config.yml file to include the ELK private IP (10.1.0.4) in line 1106 under "elasticsearch output" and line 1806 under the "Kibana Output Configuration" section.
