@@ -95,11 +95,11 @@ The playbook implements the following tasks:
 5) Further we download and launch a docker elk container using the image sebp/elk:761
 6) Enable service docker on boot
 
-![ELKinstall.png](Diagram/ELKinstall.png)
+![ELKinstall.png](Screenshots/ELKinstall.png)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![ELK_Docker_PS.png](Diagram/ELK_Docker_PS.png)
+![ELK_Docker_PS.png](Screenshots/ELK_Docker_PS.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
