@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ansible playbooks file may be used to install only certain pieces of it, such as Filebeat.
 
-![filebeat&metricbeat-playbook.yml](Ansible/filebeat&metricbeat-playbook.yml)
+[filebeat&metricbeat-playbook.yml](Ansible/filebeat&metricbeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topologu
@@ -70,8 +70,8 @@ A summary of the access policies in place can be found in the table below.
 | Name         | Publicly Accessible | Allowed IP Addresses |
 |--------------|---------------------|----------------------|
 | Jump-Host VM | Yes                 | 142.116.144.48/32    |
-| Web1         | No                  |              -        |
-| Web2         | No                  |      -                |
+| Web1         | No                  |       10.0.0.5       |
+| Web2         | No                  |       10.0.0.6       |
 | ELK VM       | Yes                 | 142.116.144.48/32    |
 
 ### Elk Configuration
@@ -95,6 +95,7 @@ The playbook implements the following tasks:
 5) Further we download and launch a docker elk container using the image sebp/elk:761
 6) Enable service docker on boot
 
+![ELKinstall.png](Diagram/ELKinstall.png)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -124,7 +125,7 @@ Metricbeat collect metrics from the operating system and from services running o
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the filebeat-config.yml file to /etc/ansible/roles.
+- Copy the filebeat-config.yml file to /etc/ansible/files.
 - Update the filebeat-config.yml file to include the ELK private IP (10.1.0.4) in line 1106 under "elasticsearch output" and line 1806 under the "Kibana Output Configuration" section.
 - Run the playbook, and navigate to http://40.117.113.163:5601/app/kibana to check that the installation worked as expected.
 
@@ -138,4 +139,18 @@ _TODO: Answer the following questions to fill in the blanks:_
 http://40.117.113.163:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+|                     COMMAND                     |                   PURPOSE                  |
+|:-----------------------------------------------:|:------------------------------------------:|
+| sudo apt-get update                             | this will update all packages              |
+| sudo apt install docker.io                      | install docker application                 |
+| sudo service docker start                       | start the docker application               |
+| systemctl status docker                         | status of the docker application           |
+| sudo docker pull cyberxsecurity/ansible         | download the docker file                   |
+| sudo docker run -ti cyberxsecurity/ansible bash | run and create a docker image              |
+| sudo docker start <image-name>                  | starts the image specified                 |
+| sudo docker ps -a                               | list all active/inactive containers        |
+| sudo docker attach <image-name>                 | effectively sshing into the ansible        |
+| ssh-keygen                                      | create a ssh key                           |
+| ansible -m ping all                             | check the connection of ansible containers |
 
