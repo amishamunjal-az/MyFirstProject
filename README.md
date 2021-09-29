@@ -109,9 +109,6 @@ Web2: 10.0.0.6/32
 
 ![Web1.png](Screenshots/Web1.png)
 
-![Web2.png](Screenshots/Web2.png)
-
-
 We have installed the following Beats on these machines:
 **File Beat**
 **Metric Beat**
