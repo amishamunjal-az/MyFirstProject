@@ -87,6 +87,7 @@ Ansible is easy to deploy because it uses no agents or additional custom securit
 From the moment you can ping the hosts through Ansible, you can start automating your environment. Begin with small tasks, following best practices, prioritizing tasks that add value to the business, solve major problems, and gain time and improving productivity.
 
 The playbook implements the following tasks:
+[install-elk.yml](Ansible/install-elk.yml)
 
 1) Configure Elk VM by installing Docker engine (docker.io)
 2) Using the apt module, we Install python3-pip
@@ -105,6 +106,11 @@ The following screenshot displays the result of running `docker ps` after succes
 This ELK server is configured to monitor the following machines:
 Web1: 10.0.0.5/32
 Web2: 10.0.0.6/32
+
+![Web1.png](Screenshots/Web1.png)
+
+![Web2.png](Screenshots/Web2.png)
+
 
 We have installed the following Beats on these machines:
 **File Beat**
